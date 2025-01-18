@@ -1,0 +1,35 @@
+{
+	"name": "parial-class",
+	"version": "0.0.1",
+	"description": "Partial Class Experimental Project",
+	"main": "start.ts",
+	"scripts": {
+		"generate-code": "node bin/decorators/_pre-processor.js"
+	},
+	"keywords": [
+		"Node"
+	],
+	"author": "Cyrille Fauvel <cyrille.fauvel@autodesk.com>",
+	"license": "MIT",
+	"dependencies": {
+		"ejs": "^3.1.10",
+		"reflect-metadata": "^0.2.2"
+	},
+	"devDependencies": {
+		"@types/ejs": "^3.1.5",
+		"@types/node": "^22.9.0",
+		"module-alias": "^2.2.3",
+		"ts-node": "^10.9.1",
+		"tsconfig-paths": "^4.2.0",
+		"typescript": "^5.0.4"
+	},
+	"prettier": {
+		"singleQuote": true
+	},
+	"_moduleAliases": {
+		"@/enums": "bin/enums",
+		"@/libs": "bin/libs",
+		"@/tools": "bin/tools",
+		"@": "bin"
+	}
+}
