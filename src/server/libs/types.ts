@@ -22,6 +22,8 @@
 // 	[P in K]: T;
 // };
 
+export type Constructor<T = {}> = new (...args: any[]) => T;
+
 export type Dictionary<T> = Record<string, T>;
 
 export type StringDictionary = Dictionary<string>;

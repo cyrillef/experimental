@@ -16,35 +16,31 @@
 //
 /*jshint esversion: 9 */
 
-import PartialOneClass from '@/partial/partial-decorated/partial-1';
-import PartialTwoClass from '@/partial/partial-decorated/partial-2';
+// import PartialOneClass from '@/partial/partial-decorated/partial-1';
+// import PartialTwoClass from '@/partial/partial-decorated/partial-2';
 import FinalDecoratedClass from '@/partial/partial-decorated/final';
 
 export const test: () => void
 	= (): void => {
-		// const sample: Samples = new Samples();
-		// sample.whoAmI();
-		PartialOneClass.myStatic();
-		PartialTwoClass.myStatic();
 
-		(FinalDecoratedClass as any).myStatic();
+		// PartialOneClass.myStatic();
+		// PartialTwoClass.myStatic();
 
-		// interface FinalDecoratedClass {
-		// 	whoAmI(): void;
-		// }
-
-		// Extend the class with the mixin methods
-		// interface test //extends ReturnType<typeof FinalDecoratedClass> { }
-		// 	extends InstanceType<ReturnType<typeof FinalDecoratedClass>> { }
+		// (FinalDecoratedClass as any).myStatic();
+		// FinalDecoratedClass.myStatic();
 
 		const finalDecoratedClass: FinalDecoratedClass = new FinalDecoratedClass();
-		(finalDecoratedClass as any).whoAmI();
+		finalDecoratedClass.hello();
+		// (finalDecoratedClass as any).whoAmI();
 		// finalDecoratedClass.whoAmI();
+		// (finalDecoratedClass as any).whoAreYou();
+		// finalDecoratedClass.whoAreYou();
 
+		// console.log(finalDecoratedClass.myVar);
+		// console.log(PartialOneClass.myStaticVar);
 
-		// const testDecoratedClass: TestDecoratedClass = new TestDecoratedClass();
-		// testDecoratedClass.hello();
-		// debugDecorator(TestDecoratedClass, /*new TestDecoratedClass(),*/ true);
+		// finalDecoratedClass.printMyVar();
+
 	};
 
 export default test;

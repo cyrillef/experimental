@@ -26,5 +26,11 @@
             "command": "echo \"File: ${file}\""
         },
 
+		{
+            "label": "create_dts",
+            "type": "shell",
+            "command": "ts-node -P \"${workspaceFolder}/src/server/partial/partial-decorated/decorators/tsconfig.json\" \"${workspaceFolder}/src/server/partial/partial-decorated/decorators/dts-build.ts\" \"${file}\""
+        },
+
 	]
 }

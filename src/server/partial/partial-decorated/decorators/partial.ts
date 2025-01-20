@@ -16,7 +16,6 @@
 //
 /*jshint esversion: 9 */
 
-// import decorate from '@/decorators/samples/lib/decorate';
 import assembleMixins from '@/libs/mixins';
 
 // target: The prototype of the class for a static method,
@@ -30,10 +29,10 @@ import assembleMixins from '@/libs/mixins';
 // @Partial('FinalDecoratedClass')
 // class PartialTwoClass {}
 // @Final
-// class FinalClass {}
+// class FinalDecoratedClass {}
 
 export type ClassDefinition = { new(...args: any[]): {} };
-// export const PartialClasses: Map<string, Function[]> = new Map<string, Function[]>();
+
 export const PartialClasses: Map<string, ClassDefinition[]> = new Map<string, ClassDefinition[]>();
 
 export function Partial(name: string): Function {
@@ -44,17 +43,9 @@ export function Partial(name: string): Function {
 	});
 }
 
-// type Constructor<T = {}> = new (...args: any[]) => T;
-
-export function Final<T extends { new(...args: any[]): {} }>(constructor: T): T {
+export function Final<T extends ClassDefinition>(constructor: T): T {
 	assembleMixins(constructor, PartialClasses.get(constructor.name) || []);
 	return (constructor);
 }
-
-// export function Final(constructor: Function): Function {
-// 	assembleMixins(constructor, PartialClasses.get(constructor.name) || []);
-// 	// return (result as T);
-// 	return (constructor);
-// }
 
 //#endregion

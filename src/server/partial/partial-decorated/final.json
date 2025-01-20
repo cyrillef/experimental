@@ -1,0 +1,439 @@
+{
+    "pos": 0,
+    "end": 1203,
+    "kind": "SourceFile",
+    "id": 0,
+    "flags": "None",
+    "modifierFlagsCache": "None",
+    "transformFlags": 50332673,
+    "statements": [
+        {
+            "pos": 0,
+            "end": 834,
+            "kind": "ImportDeclaration",
+            "id": 0,
+            "flags": "None",
+            "modifierFlagsCache": "None",
+            "transformFlags": 0,
+            "parent": "[Circular]",
+            "importClause": {
+                "pos": 769,
+                "end": 779,
+                "kind": "ImportClause",
+                "id": 0,
+                "flags": "None",
+                "modifierFlagsCache": "None",
+                "transformFlags": 0,
+                "parent": "[Circular]",
+                "isTypeOnly": false,
+                "namedBindings": {
+                    "pos": 769,
+                    "end": 779,
+                    "kind": "NamedImports",
+                    "id": 0,
+                    "flags": "None",
+                    "modifierFlagsCache": "None",
+                    "transformFlags": 0,
+                    "parent": "[Circular]",
+                    "elements": [
+                        {
+                            "pos": 771,
+                            "end": 777,
+                            "kind": "ImportSpecifier",
+                            "id": 0,
+                            "flags": "None",
+                            "modifierFlagsCache": "None",
+                            "transformFlags": 0,
+                            "parent": "[Circular]",
+                            "isTypeOnly": false,
+                            "name": {
+                                "pos": 771,
+                                "end": 777,
+                                "kind": "Identifier",
+                                "id": 0,
+                                "flags": "None",
+                                "transformFlags": 0,
+                                "parent": "[Circular]",
+                                "escapedText": "Final"
+                            }
+                        }
+                    ]
+                }
+            },
+            "moduleSpecifier": {
+                "pos": 784,
+                "end": 833,
+                "kind": "StringLiteral",
+                "id": 0,
+                "flags": "None",
+                "modifierFlagsCache": "None",
+                "transformFlags": 0,
+                "parent": "[Circular]",
+                "text": "@/partial/partial-decorated/decorators/partial",
+                "hasExtendedUnicodeEscape": false
+            }
+        },
+        {
+            "pos": 834,
+            "end": 889,
+            "kind": "ExportDeclaration",
+            "id": 0,
+            "flags": "None",
+            "modifierFlagsCache": "None",
+            "transformFlags": 0,
+            "parent": "[Circular]",
+            "isTypeOnly": false,
+            "moduleSpecifier": {
+                "pos": 848,
+                "end": 888,
+                "kind": "StringLiteral",
+                "id": 0,
+                "flags": "AwaitContext",
+                "modifierFlagsCache": "None",
+                "transformFlags": 0,
+                "parent": "[Circular]",
+                "text": "@/partial/partial-decorated/partial-1",
+                "hasExtendedUnicodeEscape": false
+            }
+        },
+        {
+            "pos": 889,
+            "end": 944,
+            "kind": "ExportDeclaration",
+            "id": 0,
+            "flags": "None",
+            "modifierFlagsCache": "None",
+            "transformFlags": 0,
+            "parent": "[Circular]",
+            "isTypeOnly": false,
+            "moduleSpecifier": {
+                "pos": 903,
+                "end": 943,
+                "kind": "StringLiteral",
+                "id": 0,
+                "flags": "AwaitContext",
+                "modifierFlagsCache": "None",
+                "transformFlags": 0,
+                "parent": "[Circular]",
+                "text": "@/partial/partial-decorated/partial-2",
+                "hasExtendedUnicodeEscape": false
+            }
+        },
+        {
+            "pos": 944,
+            "end": 1165,
+            "kind": "ClassDeclaration",
+            "id": 0,
+            "flags": "None",
+            "modifierFlagsCache": "None",
+            "transformFlags": 50340865,
+            "parent": "[Circular]",
+            "modifiers": [
+                {
+                    "pos": 944,
+                    "end": 952,
+                    "kind": "Decorator",
+                    "id": 0,
+                    "flags": "None",
+                    "modifierFlagsCache": "None",
+                    "transformFlags": 33562625,
+                    "parent": "[Circular]",
+                    "expression": {
+                        "pos": 947,
+                        "end": 952,
+                        "kind": "Identifier",
+                        "id": 0,
+                        "flags": "DecoratorContext",
+                        "transformFlags": 0,
+                        "parent": "[Circular]",
+                        "escapedText": "Final"
+                    }
+                },
+                {
+                    "pos": 952,
+                    "end": 959,
+                    "kind": "ExportKeyword",
+                    "id": 0,
+                    "flags": "None",
+                    "transformFlags": 0,
+                    "parent": "[Circular]"
+                }
+            ],
+            "name": {
+                "pos": 965,
+                "end": 985,
+                "kind": "Identifier",
+                "id": 0,
+                "flags": "None",
+                "transformFlags": 0,
+                "parent": "[Circular]",
+                "escapedText": "FinalDecoratedClass"
+            },
+            "members": [
+                {
+                    "pos": 987,
+                    "end": 1051,
+                    "kind": "PropertyDeclaration",
+                    "id": 0,
+                    "flags": "AwaitContext",
+                    "modifierFlagsCache": "None",
+                    "transformFlags": 16777217,
+                    "parent": "[Circular]",
+                    "modifiers": [
+                        {
+                            "pos": 987,
+                            "end": 996,
+                            "kind": "PublicKeyword",
+                            "id": 0,
+                            "flags": "AwaitContext",
+                            "transformFlags": 1,
+                            "parent": "[Circular]"
+                        }
+                    ],
+                    "name": {
+                        "pos": 996,
+                        "end": 1002,
+                        "kind": "Identifier",
+                        "id": 0,
+                        "flags": "AwaitContext",
+                        "transformFlags": 0,
+                        "parent": "[Circular]",
+                        "escapedText": "myVar"
+                    },
+                    "type": {
+                        "pos": 1003,
+                        "end": 1010,
+                        "kind": "StringKeyword",
+                        "id": 0,
+                        "flags": "None",
+                        "transformFlags": 1,
+                        "parent": "[Circular]"
+                    },
+                    "initializer": {
+                        "pos": 1012,
+                        "end": 1050,
+                        "kind": "StringLiteral",
+                        "id": 0,
+                        "flags": "None",
+                        "modifierFlagsCache": "None",
+                        "transformFlags": 0,
+                        "parent": "[Circular]",
+                        "text": "I am myVar from FinalDecoratedClass",
+                        "hasExtendedUnicodeEscape": false
+                    }
+                },
+                {
+                    "pos": 1051,
+                    "end": 1078,
+                    "kind": "Constructor",
+                    "id": 0,
+                    "flags": "AwaitContext",
+                    "modifierFlagsCache": "None",
+                    "transformFlags": 1025,
+                    "parent": "[Circular]",
+                    "modifiers": [
+                        {
+                            "pos": 1051,
+                            "end": 1060,
+                            "kind": "PublicKeyword",
+                            "id": 0,
+                            "flags": "AwaitContext",
+                            "transformFlags": 1,
+                            "parent": "[Circular]"
+                        }
+                    ],
+                    "parameters": [],
+                    "body": {
+                        "pos": 1074,
+                        "end": 1078,
+                        "kind": "Block",
+                        "id": 0,
+                        "flags": "None",
+                        "modifierFlagsCache": "None",
+                        "transformFlags": 0,
+                        "parent": "[Circular]",
+                        "statements": [],
+                        "multiLine": false
+                    }
+                },
+                {
+                    "pos": 1078,
+                    "end": 1162,
+                    "kind": "MethodDeclaration",
+                    "id": 0,
+                    "flags": "AwaitContext",
+                    "modifierFlagsCache": "None",
+                    "transformFlags": 1025,
+                    "parent": "[Circular]",
+                    "modifiers": [
+                        {
+                            "pos": 1078,
+                            "end": 1087,
+                            "kind": "PublicKeyword",
+                            "id": 0,
+                            "flags": "AwaitContext",
+                            "transformFlags": 1,
+                            "parent": "[Circular]"
+                        }
+                    ],
+                    "name": {
+                        "pos": 1087,
+                        "end": 1093,
+                        "kind": "Identifier",
+                        "id": 0,
+                        "flags": "AwaitContext",
+                        "transformFlags": 0,
+                        "parent": "[Circular]",
+                        "escapedText": "hello"
+                    },
+                    "parameters": [],
+                    "type": {
+                        "pos": 1096,
+                        "end": 1101,
+                        "kind": "VoidKeyword",
+                        "id": 0,
+                        "flags": "None",
+                        "transformFlags": 1,
+                        "parent": "[Circular]"
+                    },
+                    "body": {
+                        "pos": 1101,
+                        "end": 1162,
+                        "kind": "Block",
+                        "id": 0,
+                        "flags": "None",
+                        "modifierFlagsCache": "None",
+                        "transformFlags": 1024,
+                        "parent": "[Circular]",
+                        "statements": [
+                            {
+                                "pos": 1103,
+                                "end": 1159,
+                                "kind": "ExpressionStatement",
+                                "id": 0,
+                                "flags": "None",
+                                "modifierFlagsCache": "None",
+                                "transformFlags": 1024,
+                                "parent": "[Circular]",
+                                "expression": {
+                                    "pos": 1103,
+                                    "end": 1158,
+                                    "kind": "CallExpression",
+                                    "id": 0,
+                                    "flags": "None",
+                                    "modifierFlagsCache": "None",
+                                    "transformFlags": 1024,
+                                    "parent": "[Circular]",
+                                    "expression": {
+                                        "pos": 1103,
+                                        "end": 1117,
+                                        "kind": "PropertyAccessExpression",
+                                        "id": 0,
+                                        "flags": "None",
+                                        "modifierFlagsCache": "None",
+                                        "transformFlags": 0,
+                                        "parent": "[Circular]",
+                                        "expression": {
+                                            "pos": 1103,
+                                            "end": 1113,
+                                            "kind": "Identifier",
+                                            "id": 0,
+                                            "flags": "None",
+                                            "transformFlags": 0,
+                                            "parent": "[Circular]",
+                                            "escapedText": "console"
+                                        },
+                                        "name": {
+                                            "pos": 1114,
+                                            "end": 1117,
+                                            "kind": "Identifier",
+                                            "id": 0,
+                                            "flags": "None",
+                                            "transformFlags": 0,
+                                            "parent": "[Circular]",
+                                            "escapedText": "log"
+                                        }
+                                    },
+                                    "arguments": [
+                                        {
+                                            "pos": 1118,
+                                            "end": 1157,
+                                            "kind": "FirstTemplateToken",
+                                            "id": 0,
+                                            "flags": "None",
+                                            "modifierFlagsCache": "None",
+                                            "transformFlags": 1024,
+                                            "parent": "[Circular]",
+                                            "text": "I am hello() from FinalDecoratedClass",
+                                            "rawText": "I am hello() from FinalDecoratedClass",
+                                            "templateFlags": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "multiLine": true
+                    }
+                }
+            ]
+        },
+        {
+            "pos": 1165,
+            "end": 1202,
+            "kind": "ExportAssignment",
+            "id": 0,
+            "flags": "None",
+            "modifierFlagsCache": "None",
+            "transformFlags": 0,
+            "parent": "[Circular]",
+            "expression": {
+                "pos": 1181,
+                "end": 1201,
+                "kind": "Identifier",
+                "id": 0,
+                "flags": "AwaitContext",
+                "transformFlags": 0,
+                "parent": "[Circular]",
+                "escapedText": "FinalDecoratedClass"
+            }
+        }
+    ],
+    "endOfFileToken": {
+        "pos": 1202,
+        "end": 1203,
+        "kind": "EndOfFileToken",
+        "id": 0,
+        "flags": "None",
+        "transformFlags": 0,
+        "parent": "[Circular]"
+    },
+    "text": "//\n// Copyright (c) Autodesk, Inc. All rights reserved\n//\n// Permission to use, copy, modify, and distribute this software in\n// object code form for any purpose and without fee is hereby granted,\n// provided that the above copyright notice appears in all copies and\n// that both that copyright notice and the limited warranty and\n// restricted rights notice below appear in all supporting\n// documentation.\n//\n// AUTODESK PROVIDES THIS PROGRAM 'AS IS' AND WITH ALL FAULTS.\n// AUTODESK SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTY OF\n// MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE.  AUTODESK, INC.\n// DOES NOT WARRANT THAT THE OPERATION OF THE PROGRAM WILL BE\n// UNINTERRUPTED OR ERROR FREE.\n//\n/*jshint esversion: 9 */\n\n/// <reference path='./final.d.ts' />\n\nimport { Final } from '@/partial/partial-decorated/decorators/partial';\nexport * from '@/partial/partial-decorated/partial-1';\nexport * from '@/partial/partial-decorated/partial-2';\n\n@Final\nexport class FinalDecoratedClass {\n\n\tpublic myVar: string = 'I am myVar from FinalDecoratedClass';\n\n\tpublic constructor() { }\n\n\tpublic hello(): void {\n\t\tconsole.log(`I am hello() from FinalDecoratedClass`);\n\t}\n\n}\n\nexport default FinalDecoratedClass;\n",
+    "fileName": "/Users/cyrille/Developer/experimentals/partial-class/src/server/partial/partial-decorated/final.ts",
+    "path": "",
+    "resolvedPath": "",
+    "originalFileName": "",
+    "languageVersion": 99,
+    "languageVariant": 0,
+    "scriptKind": 3,
+    "isDeclarationFile": false,
+    "hasNoDefaultLib": false,
+    "nodeCount": 38,
+    "identifierCount": 8,
+    "symbolCount": 0,
+    "parseDiagnostics": [],
+    "bindDiagnostics": [],
+    "externalModuleIndicator": "[Circular]",
+    "pragmas": {},
+    "referencedFiles": [
+        {
+            "pos": 745,
+            "end": 757,
+            "fileName": "./final.d.ts"
+        }
+    ],
+    "typeReferenceDirectives": [],
+    "libReferenceDirectives": [],
+    "amdDependencies": [],
+    "identifiers": {},
+    "jsDocParsingMode": 0
+}

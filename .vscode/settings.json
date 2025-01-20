@@ -4,6 +4,10 @@
         {
             "target": "**/*.txt",
             "task": "show_filename"
+        },
+		{
+            "target": "**/*.ts",
+            "task": "create_dts"
         }
     ]
 }

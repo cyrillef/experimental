@@ -16,23 +16,21 @@
 //
 /*jshint esversion: 9 */
 
-/// <reference path='./final.d.ts' />
+import { FinalDecoratedClass } from '@/partial/partial-decorated/final';
 
-import { Final } from '@/partial/partial-decorated/decorators/partial';
-export * from '@/partial/partial-decorated/partial-1';
-export * from '@/partial/partial-decorated/partial-2';
+declare module '@/partial/partial-decorated/final' {
 
-@Final
-export class FinalDecoratedClass {
+	interface FinalDecoratedClass {
+		myVar: string;
 
-	public myVar: string = 'I am myVar from FinalDecoratedClass';
+		whoAmI(): void;
+		whoAreYou(): void;
+		printMyVar(): void;
+	}
 
-	public constructor() { }
-
-	public hello(): void {
-		console.log(`I am hello() from FinalDecoratedClass`);
+	namespace FinalDecoratedClass {
+		let myStaticVar: string;
+		function myStatic(): void;
 	}
 
 }
-
-export default FinalDecoratedClass;

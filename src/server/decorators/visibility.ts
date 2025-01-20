@@ -16,23 +16,36 @@
 //
 /*jshint esversion: 9 */
 
-/// <reference path='./final.d.ts' />
+import 'reflect-metadata';
 
-import { Final } from '@/partial/partial-decorated/decorators/partial';
-export * from '@/partial/partial-decorated/partial-1';
-export * from '@/partial/partial-decorated/partial-2';
+function Visibility(visibility: 'public' | 'private' | 'protected') {
+	return (function (target: any, propertyKey: string) {
+		Reflect.defineMetadata('design:visibility', visibility, target, propertyKey);
+	});
+}
 
-@Final
-export class FinalDecoratedClass {
+export default Visibility;
 
-	public myVar: string = 'I am myVar from FinalDecoratedClass';
+/*
+ex:
 
-	public constructor() { }
+class MyClass {
 
-	public hello(): void {
-		console.log(`I am hello() from FinalDecoratedClass`);
+	@Visibility('public')
+	public name: string;
+
+	@Visibility('public')
+	public constructor(name: string) {
+		this.name = name;
+	}
+
+	@Visibility('protected')
+	protected myMethod(): void {
+		console.log('I am protected');
 	}
 
 }
 
-export default FinalDecoratedClass;
+const visibility: any = Reflect.getMetadata('visibility', target, propertyKey) || 'public';
+
+*/
