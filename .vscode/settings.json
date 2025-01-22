@@ -1,13 +1,43 @@
 {
     // If you change settings.json, call "Apply settings" from the menu.
+	"triggerTaskOnSave.tasks": {
+		"create_dts": [
+			"!**/*.d.ts",
+			"!**/*.d.tsx",
+			"**/*.ts",
+			"**/*.tsx",
+		],
+	},
+
     "watch-run.targetList": [
         {
             "target": "**/*.txt",
             "task": "show_filename"
         },
+
 		// {
         //     "target": "**/*.ts",
-        //     "task": "create_dts"
+        //     "task": "create_dts",
+
         // }
-    ]
+		// {
+		// 	"target": "^(?!.*\\.d\\.ts$)(?!.*\\.d\\.tsx$).*\\.(ts|tsx)$",
+		// 	"targetType": "regexp",
+		// 	"task": "watch-ts"
+		// }
+		// {
+		// 	"target": "**/*.ts",
+		// 	"notMatch": "**/*.d.ts",
+		// 	"task": "create_dts"
+		// },
+		// {
+		// 	"target": "**/*.tsx",
+		// 	"notMatch": "**/*.d.tsx",
+		// 	"task": "create_dts"
+		// }
+    ],
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "always",
+		"source.sortImports": "always",
+	},
 }

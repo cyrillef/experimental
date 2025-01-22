@@ -26,9 +26,52 @@
             "command": "echo \"File: ${file}\""
         },
 
+		// {
+        //     "label": "create_dts",
+        //     "type": "shell",
+		// 	"isBackground": true,
+        //     "command": "ts-node",
+		// 	"args": [
+		// 		"-P",
+		// 		"${workspaceFolder}/src/server",
+		// 		"${workspaceFolder}/src/server/partial/partial-decorated/decorators/dts-build.ts",
+		// 		"${file}",
+		// 		"${workspaceFolder}/src/server/tsconfig.json"
+		// 	],
+		// 	"group": {
+		// 		"kind": "build",
+		// 		"isDefault": false
+		// 	},
+		// 	"problemMatcher": [],
+		// 	// "problemMatcher": {
+		// 	// 	"owner": "typescript",
+		// 	// 	"fileLocation": ["relative", "${workspaceFolder}"],
+		// 	// 	"pattern": {
+		// 	// 		"regexp": "^(?!.*\\.d\\.ts$)(?!.*\\.d\\.tsx$).*\\.(ts|tsx)$", //"^(.*\\.ts)$",
+		// 	// 		"file": 1,
+		// 	// 		"location": 2,
+		// 	// 		"message": 3
+		// 	// 	},
+		// 	// 	"background": {
+		// 	// 		"beginsPattern": "^.*Starting.*$",
+		// 	// 		"endsPattern": "^.*Finished.*$"
+		// 	// 	}
+		// 	// },
+		// 	// "runOptions": {
+		// 	// 	"runOn": "" // Run the task only once when the file is saved
+		// 	// },
+		// 	"presentation": {
+		// 		"echo": false,
+		// 		"reveal": "never", // "always",
+		// 		"focus": false,
+		// 		"panel": "dedicated", //"shared"
+		// 	},
+
+        // },
+
 		{
-            "label": "create_dts",
-            "type": "shell",
+			"label": "create_dts",
+			"type": "shell",
 			"isBackground": true,
             "command": "ts-node",
 			"args": [
@@ -36,20 +79,20 @@
 				"${workspaceFolder}/src/server",
 				"${workspaceFolder}/src/server/partial/partial-decorated/decorators/dts-build.ts",
 				"${file}",
-				"${workspaceFolder}/src/server/tscocnfig.json"
+				"${workspaceFolder}/src/server/tsconfig.json"
 			],
+			"problemMatcher": [],
 			"group": {
 				"kind": "build",
-				"isDefault": false
+				"isDefault": true
 			},
-			"problemMatcher": ["$tsc-watch"],
 			"presentation": {
-				"echo": true,
-				"reveal": "never",
+				"echo": false,
+				"reveal": "never", // "always",
 				"focus": false,
-				"panel": "dedicated"
+				"panel": "dedicated", //"shared"
 			},
-        },
+		},
 
 	]
 }

@@ -16,30 +16,30 @@
 //
 /*jshint esversion: 9 */
 
-// import PartialOneClass from '@/partial/partial-decorated/partial-1';
-// import PartialTwoClass from '@/partial/partial-decorated/partial-2';
+import PartialOneClass from '@/partial/partial-decorated/partial-1';
+import PartialTwoClass from '@/partial/partial-decorated/partial-2';
 import FinalDecoratedClass from '@/partial/partial-decorated/final';
 
 export const test: () => void
 	= (): void => {
 
-		// PartialOneClass.myStatic();
-		// PartialTwoClass.myStatic();
+		PartialOneClass.myStatic();
+		PartialTwoClass.myStatic();
 
-		// (FinalDecoratedClass as any).myStatic();
-		// FinalDecoratedClass.myStatic();
+		(FinalDecoratedClass as any).myStatic();
+		FinalDecoratedClass.myStatic();
 
 		const finalDecoratedClass: FinalDecoratedClass = new FinalDecoratedClass();
 		finalDecoratedClass.hello();
-		// (finalDecoratedClass as any).whoAmI();
-		// finalDecoratedClass.whoAmI();
-		// (finalDecoratedClass as any).whoAreYou();
-		// finalDecoratedClass.whoAreYou();
+		(finalDecoratedClass as any).whoAmI();
+		finalDecoratedClass.whoAmI();
+		(finalDecoratedClass as any).whoAreYou();
+		finalDecoratedClass.whoAreYou();
 
-		// console.log(finalDecoratedClass.myVar);
-		// console.log(PartialOneClass.myStaticVar);
+		console.log(finalDecoratedClass.myVar);
+		console.log(PartialOneClass.myStaticVar);
 
-		// finalDecoratedClass.printMyVar();
+		finalDecoratedClass.printMyVar();
 
 	};
 

@@ -16,22 +16,18 @@
 //
 /*jshint esversion: 9 */
 
-import Visibility from '@/decorators/visibility';
 import { Partial } from '@/partial/partial-decorated/decorators/partial';
 
 @Partial('FinalDecoratedClass')
 export class PartialTwoClass {
 
 	// This is not allowed because instance variable in TS must be in the final class
-	@Visibility('public')
 	public myVar: string = 'I am myVar from PartialTwoClass';
 
-	@Visibility('public')
 	public whoAreYou(): void {
 		console.log(`I am whoAreYou() from PartialTwoClass`);
 	}
 
-	@Visibility('public')
 	public static myStatic(): void {
 		console.log(`I am myStatic() from PartialTwoClass`);
 	}

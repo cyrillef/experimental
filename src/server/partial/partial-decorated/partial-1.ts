@@ -16,7 +16,6 @@
 //
 /*jshint esversion: 9 */
 
-import Visibility from '@/decorators/visibility';
 import { Partial } from '@/partial/partial-decorated/decorators/partial';
 
 @Partial('FinalDecoratedClass')
@@ -25,20 +24,16 @@ export class PartialOneClass {
 	// public myVar!: string;
 	declare public myVar: string;
 
-	@Visibility('public')
 	public static myStaticVar: string = `I am myStaticVar from PartialOneClass`;
 
-	@Visibility('public')
 	public whoAmI(): void {
 		console.log(`I am whoAmI() from PartialOneClass`);
 	}
 
-	@Visibility('public')
 	public static myStatic(): void {
 		console.log(`I am myStatic() from PartialOneClass`);
 	}
 
-	@Visibility('public')
 	public printMyVar(): void {
 		console.log(`printing from PartialOneClass, this.myVar = ${this.myVar}`);
 	}
