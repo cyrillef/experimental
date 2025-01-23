@@ -22,10 +22,11 @@ import _fs from 'fs/promises';
 
 // import AppSettings from '@/app-settings';
 import { test as testGeneric } from '@/generic/generic/_test';
-import { test as testGenericComplex } from '@/generic/generic-with-params/_test';
-import { test as testDerived } from '@/partial/partial-derived/_test';
-import { test as testMixins } from '@/partial/partial-mixins/_test';
-import { test as testDecorated } from '@/partial/partial-decorated/_test';
+import { test as testGenericWComplex } from '@/generic/generic-complex/_test';
+import { test as testGenericWithParams } from '@/generic/generic-with-params/_test';
+// import { test as testDerived } from '@/partial/partial-derived/_test';
+// import { test as testMixins } from '@/partial/partial-mixins/_test';
+// import { test as testDecorated } from '@/partial/partial-decorated/_test';
 
 const runTests: (tests: ((() => Promise<void>) | (() => void))[], title?: string) => Promise<void>
 	= async (tests: ((() => Promise<void>) | (() => void))[], title: string = 'default'): Promise<void> => {
@@ -42,15 +43,15 @@ const runTests: (tests: ((() => Promise<void>) | (() => void))[], title?: string
 (async () => {
 
 	//#region Generic Classes
-	await runTests([testGeneric, testGenericComplex], 'Generic Classes');
+	await runTests([testGeneric, testGenericWComplex, testGenericWithParams], 'Generic Classes');
 	//#endregion
 
 	//#region Partial Classes
-	await runTests([testDerived, testMixins], 'Partial Classes');
+//	await runTests([testDerived, testMixins], 'Partial Classes');
 	//#endregion
 
 	//#region DecoDecorators Partial Classesators
-	await runTests([testDecorated], 'Decorators Partial Classes');
+//	await runTests([testDecorated], 'Decorators Partial Classes');
 	//#endregion
 
 })();

@@ -16,16 +16,20 @@
 //
 /*jshint esversion: 9 */
 
-import TestClass from '@/generic/generic/test-class';
+import TestClass from '@/generic/common/test-class';
 import GenericClass from '@/generic/generic/generic';
 
 export const test: () => void
 	= (): void => {
-		const genericInstance = new GenericClass<TestClass>(TestClass);
+		console.log(`Testing ${GenericClass.name}`);
+
+		const genericInstance: GenericClass<TestClass> = new GenericClass<TestClass>(TestClass);
 		genericInstance.callWhoAmI();
 
 		let instance: TestClass = genericInstance.createInstance();
 		instance.whoAmI();
+
+		GenericClass.myStatic(TestClass);
 	};
 
 export default test;

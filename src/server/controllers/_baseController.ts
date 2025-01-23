@@ -23,7 +23,8 @@ export interface IController {
 	initializeRoutes(): void;
 }
 
-export abstract class BaseController implements IController {
+export abstract class BaseController implements IController
+{
 
 	protected constructor(
 		public path: string = '/',

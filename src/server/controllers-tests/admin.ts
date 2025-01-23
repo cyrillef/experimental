@@ -16,22 +16,26 @@
 //
 /*jshint esversion: 9 */
 
-export interface ITestClass {
-	whoAmI(): void;
-}
+/// <reference path='./admin.d.ts' />
 
-export class TestClass implements ITestClass {
+import { IController } from '@/controllers/_baseController';
+import BaseController from '@/controllers/_baseController';
+import { Final } from 'partial-class';
 
-	public constructor(private params?: string) {
+export * from '@/controllers-tests/admin/contacts';
+export * as X from '@/controllers-tests/admin/products';
+
+@Final
+class AdminController extends BaseController implements IController {
+
+	public constructor(
+		public path: string = '/admin',
+		public permissions: string[] = ['admin']
+	) {
+		super(path, permissions);
+		//this.initializeRoutes();
 	}
 
-	public whoAmI(): void {
-		if (!this.params)
-			console.log('I am a TestClass instance');
-		else
-			console.log(`I am a TestClass instance with params: ${this.params}`);
-	}
-
 }
 
-export default TestClass;
+export default AdminController;

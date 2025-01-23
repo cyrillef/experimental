@@ -16,20 +16,11 @@
 //
 /*jshint esversion: 9 */
 
-import TestClass from '@/generic/common/test-class';
-import GenericComplexClassWithParams from '@/generic/generic-with-params/generic';
+import { Partial } from 'partial-class';
 
-export const test: () => void
-	= (): void => {
-		console.log(`Testing ${GenericComplexClassWithParams.name}`);
+@Partial
+export class AdminController  {
 
-		const genericInstanceWithParams = new GenericComplexClassWithParams<TestClass>(TestClass, 'cyrille');
-		genericInstanceWithParams.callWhoAmI();
+}
 
-		const instance: TestClass = genericInstanceWithParams.createInstance('simon');
-		instance.whoAmI();
-
-		GenericComplexClassWithParams.callMyStatic();
-	};
-
-export default test;
+export default AdminController;

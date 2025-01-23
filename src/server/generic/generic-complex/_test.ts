@@ -16,38 +16,20 @@
 //
 /*jshint esversion: 9 */
 
-import { ITestClass } from '@/generic/common/test-class';
 import TestClass from '@/generic/common/test-class';
+import GenericComplexClass from '@/generic/generic-complex/generic';
 
-// Define an interface with a constructor signature
-interface Constructor<T extends ITestClass> {
-	new(): T; //new(...args: any[]): T;
-}
+export const test: () => void
+	= (): void => {
+		console.log(`Testing ${GenericComplexClass.name}`);
 
-export class GenericComplexClass<T extends ITestClass> {
-	private instance: T;
+		const genericInstance = new GenericComplexClass<TestClass>(TestClass);
+		genericInstance.callWhoAmI();
 
-	public constructor(ctor: Constructor<T>) {
-		this.instance = new ctor();
-	}
+		let instance: TestClass = genericInstance.getInstance();
+		instance.whoAmI();
 
-	public getInstance(): T {
-		return (this.instance);
-	}
+		GenericComplexClass.callMyStatic();
+	};
 
-	public callWhoAmI(): void {
-		const t: T = this.instance;
-		if ('whoAmI' in t)
-			t.whoAmI();
-		else
-			console.log('whoAmI() not found');
-	}
-
-	public static callMyStatic(): void {
-		TestClass.myStatic();
-		// (T).myStatic();
-	}
-
-}
-
-export default GenericComplexClass;
+export default test;

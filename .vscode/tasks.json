@@ -77,7 +77,8 @@
 			"args": [
 				"-P",
 				"${workspaceFolder}/src/server",
-				"${workspaceFolder}/src/server/partial/partial-decorated/decorators/dts-build.ts",
+				"${workspaceFolder}/node_modules/partial-class/bin/scripts/dts-build.js",
+				// "${workspaceFolder}/node_modules/partial-class/src/lib/scripts/dts-build.ts",
 				"${file}",
 				"${workspaceFolder}/src/server/tsconfig.json"
 			],

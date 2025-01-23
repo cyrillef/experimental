@@ -16,30 +16,48 @@
 //
 /*jshint esversion: 9 */
 
-import { ITestClass } from '@/generic/common/test-class';
-import { ITestClassStatic } from '@/generic/common/test-class';
+export interface ITestClass {
+	whoAmI(): void;
+}
 
-export class GenericClass<T extends ITestClass> {
+export interface ITestClassStatic {
+	myStatic(): void;
+}
 
-	public constructor(private ctor: { new(): T }) {
+export class TestClass implements ITestClass {
+
+	public constructor() {
 	}
 
-	public createInstance(): T {
-		return (new this.ctor());
+	public whoAmI(): void {
+		console.log('I am whoAmI() from TestClass');
 	}
 
-	public callWhoAmI(): void {
-		const t: T = this.createInstance();
-		if ('whoAmI' in t)
-			t.whoAmI();
-		else
-			console.log('whoAmI() not found');
+	public static myStatic(): void {
+		console.log('I am myStatic() from TestClass');
 	}
 
+}
+
+export class MyGeneric<T extends TestClass> {
+
+	public constructor(private _value: T) {
+	}
+
+	public whoAmI(): void {
+		console.log('I am whoAmI() from MyGeneric');
+		this._value.whoAmI();
+	}
+
+	// public static myStatic<K extends ITestClassStatic>(cls: K): void {
 	public static myStatic<K extends ITestClassStatic>(cls: K): void {
+		console.log('I am myStatic() from MyGeneric');
 		cls.myStatic();
 	}
 
 }
 
-export default GenericClass;
+const instance: MyGeneric<TestClass> = new MyGeneric(new TestClass());
+instance.whoAmI();
+MyGeneric.myStatic(TestClass);
+MyGeneric.myStatic<ITestClassStatic>(TestClass);

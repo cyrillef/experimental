@@ -16,7 +16,8 @@
 //
 /*jshint esversion: 9 */
 
-import { ITestClass } from '@/generic/generic/test-class';
+import { ITestClass } from '@/generic/common/test-class';
+import TestClass from '@/generic/common/test-class';
 
 // Define an interface with a constructor signature
 interface Constructor<T extends ITestClass> {
@@ -40,7 +41,12 @@ export class GenericComplexClassWithParams<T extends ITestClass> {
 		if ('whoAmI' in t)
 			t.whoAmI();
 		else
-			console.log('whoAmI method not found');
+			console.log('whoAmI() not found');
+	}
+
+	public static callMyStatic(): void {
+		TestClass.myStatic();
+		// (T).myStatic();
 	}
 
 }
